@@ -47,6 +47,14 @@ def sort_list(long_string, long_bit, short_string, short_bit):
     string = []
     bits = []
     for i in len(long_string):
+        if len(long_string[i]) == 5:
+            string.append(long_string[i])
+            bits.append(long_bit[i])
+    for i in len(short_string):
+        if len(short_string[i]) == 5:
+            string.append(short_string[i])
+            bits.append(short_bit[i])
+    for i in len(long_string):
         if len(long_string[i]) == 4:
             string.append(long_string[i])
             bits.append(long_bit[i])
