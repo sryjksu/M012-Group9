@@ -35,6 +35,7 @@ def decode(long_string, long_bit, short_string, short_bit, text):
                     answer += short_string[i]
                     index += len(short_bit[i])
                     continue
+        if text[index] == "1":
             for i in range(len(long_bit)):
                 if text[index:index + len(long_bit[i])] == long_bit[i]:
                     answer += long_string[i]
