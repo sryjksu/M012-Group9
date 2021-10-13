@@ -40,14 +40,14 @@ for index in range(len(characters)):
     count = 0
     if len(newCharacters) == 0:
         newCharacters.append(i)
-        newBinary.append(binary[0])
+        newBinary.append(char_binary[0])
     else:
         while len(i) < len(newCharacters[count]):
             count += 1
             if count >= len(newCharacters):
                 break
         newCharacters.insert(count, i)
-        newBinary.insert(count, binary[index])
+        newBinary.insert(count, char_binary[index])
     
     
 print(characters)
