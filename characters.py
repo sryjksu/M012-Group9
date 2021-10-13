@@ -32,6 +32,24 @@ for z in range(16,len(char_binary)):
             str = str + '0'
         char_binary[z] = "1" + str + char_binary[z]
 
+#sorts characters and binary into lists where longest strings are first and the binary numbers stay with its original string
+newCharacters = []
+newBinary = []
+for index in range(len(characters)):
+    i = characters[index]
+    count = 0
+    if len(newCharacters) == 0:
+        newCharacters.append(i)
+        newBinary.append(binary[0])
+    else:
+        while len(i) < len(newCharacters[count]):
+            count += 1
+            if count >= len(newCharacters):
+                break
+        newCharacters.insert(count, i)
+        newBinary.insert(count, binary[index])
+    
+    
 print(characters)
 print(char_binary)
 
